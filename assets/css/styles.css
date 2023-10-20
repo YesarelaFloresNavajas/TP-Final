@@ -1,0 +1,345 @@
+/*
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #292929;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+  }
+  
+  header {
+    background: #03A9F4;
+    width: 100%;
+    clear: both;
+    content:'';
+    display: table;
+  }
+  
+  .menu {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  img {
+    width: 120px;
+    height: 50px;
+    float: left;
+    padding: 8px;
+  
+  }
+  
+  nav {
+    float: right;
+  }
+  
+  nav ul li {
+    list-style: none;
+    margin-left: 75px;
+    padding: 12px 0;
+    float: left;
+    position: relative;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #444;
+    font-weight: bold;
+  }
+  
+  nav ul li a::before {
+    display: block;
+    content: '';
+    width: 0%;
+    background: #444;
+    height: 5px;
+    top:0;
+    position: absolute;
+    transition: width 0.2s;
+  }
+  
+  nav ul li a:hover::before {
+    width: 100%;
+  }
+*/
+
+  /*css*/
+
+  *{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background: white;
+}
+
+h1{ font-size: 3.5em;}
+h2{ font-size: 2.7em;}
+h3{ font-size: 2em;}
+p{ font-size: 1.25em;}
+li{ font-size: 1.25em;}
+
+header{
+  background: linear-gradient(to right, rgb(29, 33, 245) 0%, rgb(35, 153, 199));
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2%,
+}
+
+ul {
+  display: flex;
+  gap: 40px;
+  list-style-type: none;
+  text-align: center;
+}
+
+.img-st {
+  width: 200px;
+  border-radius: 50%;
+}
+
+
+.etiquetas a {
+  color: white;
+  text-decoration: none;
+}
+
+/*
+.container{
+  width: 100%;
+  padding: 2%;
+  margin: auto;
+
+}
+*/
+
+.container{
+  max-width: 1400px;
+  margin: auto;
+  padding: 150px 12px;
+}
+
+#publicaciones{
+  background-color: rgb(30,30,30);
+  color: white;
+  text-align: center;
+}
+
+.carta{
+  background-position: center center;
+  background-size: cover;
+  padding: 50px 0px;
+  margin: 30px;
+  border-radius: 15px;
+}
+
+button{
+  font-size: 1.25em;
+  font-weight: bold;
+  padding: 10px 30px;
+  border-radius: 5px;
+  border: 2px solid rgba(0,0,0,0.3);
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+  color: white;
+  background: linear-gradient(to right, rgb(12, 104, 209), rgb(20, 133, 247));
+  margin-left: 2%;
+  margin-bottom: 2%;
+}
+
+button:hover{
+  background-color: rgb(250,162,15);
+}
+ button a {
+  text-decoration: none;
+  color: white;
+ }
+
+#carreras{
+  color: black;
+  text-align: center;
+}
+
+#carreras .container{
+  padding: 120px 10px;
+}
+
+
+#carreras .carta{
+  background-position: center center;
+  background-size: cover;
+  padding: 30px 0px;
+  margin: 30px;
+  border-radius: 15px;
+}
+
+#carh2 {
+  background: rgb(255, 102, 0);
+  border: 2px rgb(199, 83, 6);
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+#carreras .cont {
+  border: 2px solid blue;
+  border-radius: 15px;
+
+}
+
+/*formulario*/
+
+.form-register {
+  width: 550px;
+  padding: 30px;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 4px;
+  font-family: 'Arial';
+  color: black;
+  box-shadow: 7px 13px 37px #030435;
+  margin-bottom: 3%;
+}
+
+.form-register h3 {
+  color: rgb(12, 104, 209);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.controls {
+  width: 100%;
+  background: white;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #1f53c5;
+  font-family: 'Times New Roman';
+  font-size: 18px;
+  color: lightslategrey;
+}
+
+.form-register .botons {
+  width: 100%;
+  background: linear-gradient(to right, rgb(12, 104, 209), rgb(20, 133, 247));
+  border: none;
+  border-radius: 20px;
+  padding: 12px;
+  color: white;
+  margin: 16px 0;
+  font-size: 16px;
+}
+
+/*footer*/
+
+footer {
+  background-image: radial-gradient( circle 767px at 10.2% 22.1%,  rgb(29, 33, 245) 0%, rgba(0,191,255,1) 90% );
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+footer a {
+  box-sizing: border-box;
+  text-decoration: none;
+  padding: 20px;
+  border: #030435;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  justify-content: center;
+}
+
+.gmail {
+  background-color: rgb(212, 17, 17);
+}
+
+.facebook {
+  background-color: #1f53c5;
+}
+
+.instagram {
+  background-color: rgb(255, 102, 0);
+}
+
+/*
+.buttons {
+  min-width: 300px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons a {
+  text-decoration: none;
+  font-size: 28px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background: #314652;
+  color: #f1f1f1;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+  transition: all .4s ease-in-out;
+}
+
+.buttons a:hover {
+  transform: scale(1.2);
+}
+
+
+.redes {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.redes i {
+  text-align: center;
+  font-size: 25px;
+  color: #030435;
+  margin: 20px;
+  border-radius: 50%;
+  box-shadow: 0px 5px 10px rgb(1, 6, 78);
+  transition: .3s ease;
+}
+
+.fa-gmail:hover {
+background-color: red;
+color: white;
+box-shadow: 0 0 15px red,
+            0 0 45px red,
+            0 0 75px red,
+            0 0 115px red;
+}
+
+.fa-instagram:hover {
+  background-color: rgb(255, 62, 0);
+  color: white;
+  box-shadow: 0 0 15px rgb(255, 62, 0),
+              0 0 45px rgb(255, 62, 0),
+              0 0 75px rgb(255, 62, 0),
+              0 0 115px rgb(255, 62, 0);
+  }
+
+  .fa-facebook:hover {
+    background-color: rgb(0, 4, 255);
+    color: white;
+    box-shadow: 0 0 15px rgb(0, 4, 255),
+                0 0 45px rgb(0, 4, 255),
+                0 0 75px rgb(0, 4, 255),
+                0 0 115px rgb(0, 4, 255);
+    }
+*/
+
