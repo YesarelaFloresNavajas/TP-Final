@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: beige;
+    padding: 1.5%;
+}
+/*header*/
+header{
+    background: linear-gradient(to right, rgb(29, 33, 245) 0%, rgb(35, 153, 199));
+    height: 100%;
+    display: flex;
+    justify-content: space-around !important;
+    align-items: center;
+    padding: 1%,
+  }
+  
+  #bar-nav{
+    display: flex ;
+    gap: 10%;
+    list-style-type: none;
+    text-align: center;
+  }
+
+  .img-st {
+    width: 10rem;
+    border-radius: 50%;
+  }
+
+  .etiquetas a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+  }
+  
+/*título*/
+h1 {
+    text-align: center;
+    color: rgb(255, 102, 0);
+    font-size: 4em;
+    margin: 3%;
+}
+/*Main*/
+h2 {
+    font-size: 2em;
+    text-align: center;
+    color: #1f53c5;
+    margin: 2%;
+}
+
+.contenedor {
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-content: center;
+
+}
+
+img {
+    max-width: 50%;
+
+}
+/*footer*/
+
+footer {
+    background-image: radial-gradient( circle 767px at 10.2% 22.1%,  rgb(29, 33, 245) 0%, rgba(0,191,255,1) 90% );
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  footer a {
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 20px;
+    border: #030435;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .gmail {
+    background-color: rgb(212, 17, 17);
+  }
+  
+  .facebook {
+    background-color: #1f53c5;
+  }
+  
+  .instagram {
+    background-color: rgb(255, 102, 0);
+  }
