@@ -329,12 +329,15 @@ footer a {
   text-decoration: none;
   padding: 20px;
   border: #030435;
-  border-radius: 50%;
-  color: white;
   text-align: center;
   justify-content: center;
 }
 
+.img-logo img{
+  width: 50px;
+  border-radius: 50%;
+}
+/*
 .gmail {
   background-color: rgb(212, 17, 17);
 }
@@ -346,6 +349,7 @@ footer a {
 .instagram {
   background-color: rgb(255, 102, 0);
 }
+*/
 
 /* media queries*/
 
