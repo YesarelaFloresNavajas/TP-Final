@@ -263,6 +263,14 @@ div .materias {
 
 }
 
+#carrera1 {
+  font-weight: bold;
+}
+
+#carrera2 {
+  font-weight: bold;
+}
+
 .h3-mod {
   text-decoration: dotted !important;
   text-shadow: 10px 13px 37px #030435;
@@ -361,6 +369,32 @@ h1 {
   padding-right: 20%;
 }
 
+#carreras {
+  display: flex;
+  flex-direction: column;
+ }
+
+ #carrera1 {
+  font-weight: normal;
+}
+
+#carrera2 {
+  font-weight: normal;
+}
+#carreras .cont {
+  border: 2px solid lightblue;
+  border-radius: 15px;
+
+}
+
+
+#bar-nav{
+  display: flex ;
+  gap: 3%;
+  list-style-type: none;
+  text-align: center;
+  font-size: large;
+}
 }
 
 @media (max-width: 780px) {
