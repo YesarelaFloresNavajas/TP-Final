@@ -397,7 +397,7 @@ h1 {
 }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 790px) {
   h1 {
     text-shadow: 10px 10px 25px rgb(230, 126, 34 );
     text-align: center;
@@ -457,8 +457,18 @@ h1 {
  footer {
   background-image: radial-gradient( circle 767px at 10.2% 22.1%,  rgb(211, 84, 0) 0%, rgba(243, 156, 18, 1) 90% );
  }
+ 
 }
 
+
+@media (max-width: 480px) {
+  #pub-in {
+    src: url(<url>https://instagram.com/compartiendomisapuntes?utm_source=qr&igshid=MTdldnV4M29qdTF3Nw==);
+  }
+  .micro-pc {
+    display: none;
+  }
+}
 /*
 .buttons {
   min-width: 300px;
