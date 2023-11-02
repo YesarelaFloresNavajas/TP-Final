@@ -468,6 +468,10 @@ h1 {
   .micro-pc {
     display: none;
   }
+  
+  #publicaciones {
+    display: none !important;
+  }
 }
 /*
 .buttons {
