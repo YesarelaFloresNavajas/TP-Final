@@ -1,4 +1,4 @@
-<span><img src="./assets/img/logo.jpg" style= "height: 10rem; align-items: center"></span>
+<span><img src="./assets/img/logo.jpg" style= "height: 10rem" align="center"></span>
 
 <h1 align="center"> COMPARTIENDO MIS APUNTES</h1>
 
