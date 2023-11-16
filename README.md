@@ -7,3 +7,11 @@ Ya que estaba haciendo este curso decidí hacerle una página a mi trabajo para 
 La página se guía con los colores del logo.
 
 
+Enlaces
+
+Repositorio de GitHub
+https://github.com/YesarelaFloresNavajas/TP-Final
+
+
+Deploy de GitHub
+https://yesarelafloresnavajas.github.io/TP-Final/
