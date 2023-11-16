@@ -5,19 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/73f851add2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+      .own {
+        display: block;
+      }
+      .none {
+        display: none;
+      }
+    </style>
     <title>Compartiendo mis Apuntes</title>
 </head>
-<body>
+<body id="body-id">
   <header>
     <!--barra de navegación-->
-      <img src="assets/img/logo.jpg" alt="Compartiendo mis Apuntes" class="img-st">
-      <nav class="etiquetas">
-        <ul id="bar-nav">
-          <li><a href="assets/pages/sobre-nosotros.html">SOBRE NOSOTROS</a></li>
-          <li><a href="#sugerencias">SUGERENCIAS</a></li>
-          <li><a href="assets/pages/noticias.html">NOTICIAS</a></li>
-          <li><a href="assets/pages/contacto.html">CONTACTO</a></li>
-        </ul> 
+      <nav class="etiquetas" id="barra-nav">
+        <a href="index.html" alt="Compartiendo mis Apuntes" class="a-logo"><img src="assets/img/logo.jpg" class="logo" alt="Logo de Compartiendo mis Apuntes"></a>
+          <a href="assets/pages/sobre-nosotros.html">SOBRE NOSOTROS</a>
+          <a href="#sugerencias">SUGERENCIAS</a>
+          <a href="assets/pages/noticias.html">NOTICIAS</a>
+          <a href="assets/pages/contacto.html">CONTACTO</a>
+          <button class="switch-dm" id="switch-dm">
+            <span class="material-symbols-outlined">
+              brightness_7
+            </span>
+            <span class="material-symbols-outlined">
+              dark_mode
+            </span>
+          </button>
       </nav>
   </header>
   <main>
@@ -107,17 +123,99 @@
           </div>
       </div>
     </section>
+    <!--<section class="form-register" id="sugerencias"> 
+      <h3>Sugerencias</h3> -->
+      <!--formulario
+      <form action="" class="form-mod formulario" id="formulario">-->
+        <!--nombre
+        <div class="formulario_grupo" id="grupo_nombre">
+          <label class="formulario_label" for="nombre">Nombre</label>
+          <div class="formulario_grupo-input">
+            <input class="formulario_input" type="text" name="nombre" id="nombre" placeholder="Ingrese su Nombre"> 
+            <i class="formulario_validacion-estado fas fa-times-circle"></i>
+          </div>
+          <p class="formulario_input-error">Por favor, ingrese su nombre.</p>
+        </div>-->
+        <!--apellido
+        <div class="formulario_grupo" id="grupo_apellido">
+          <label class="formulario_label" for="lastname">Apellido</label>
+          <div class="formulario_grupo-input">
+            <input class="formulario_input" type="text" name="lastname" id="lastname" placeholder="Ingrese su Apellido"> 
+            <i class="formulario_validacion-estado fas fa-times-circle"></i>
+          </div>
+          <p class="formulario_input-error">Por favor, ingrese su apellido.</p>
+        </div>-->
+        <!--cooreo
+        <div class="formulario_grupo" id="grupo_email">
+          <label class="formulario_label" for="email">Correo</label>
+          <div class="formulario_grupo-input">
+            <input class="formulario_input" type="email" name="email" id="email" placeholder="correo@correo.com">
+            <i class="formulario_validacion-estado fas fa-times-circle"></i>
+          </div>
+          <p class="formulario_input-error">Por favor, ingrese un email válido.</p>
+        </div>-->
+        <!--comentarios
+        <div class="formulario_grupo" id="grupo_comentario">
+          <label class="formulario_label" for="comments">Comentarios</label>
+          <div class="formulario_grupo-input">
+            <input class="formulario_input" type="text" name="comments" id="comments" placeholder="Escriba aquí..." spellcheck="true">
+            <i class="formulario_validacion-estado fas fa-times-circle"></i>
+          </div>
+          <p class="formulario_input-error">Por favor, ingrese un comentario para enviar.</p>
+        </div>-->
+        <!--botón enviar
+        <div class="formulario_grupo formulario_grupo-btn-enviar">
+          <input class="formulario_btn" type="submit" value="Enviar">
+          <p class="formulario_mensaje-exito" id="formulario_mensaje-exito">El formulario se envió correctamente.</p>
+        </div>-->
+      <!--</form>
+    </section> <br>-->
     <section class="form-register" id="sugerencias">
       <h3>Sugerencias</h3>
-      <label for="name">Nombre</label>
-      <input class="controls" type="text" name="name" id="name" placeholder="Ingrese su Nombre"> 
-      <label for="lastname">Apellido</label>
-      <input class="controls" type="text" name="lastname" id="lastname" placeholder="Ingrese su Apellido"> 
-      <label for="email">Correo</label>
-      <input class="controls" type="email" name="email" id="email" placeholder="Ingrese su Correo">
-      <label for="coments">Comentarios</label>
-      <input class="controls" type="text" name="coments" id="coments" placeholder="Escriba aquí..." spellcheck="true">
-      <input class="botons" type="submit" value="Enviar">
+      <!--formulario-->
+      <form action="" class="form-mod formulario" id="formulario">
+        <!--nombre-->
+        <div class="formulario_grupo" id="grupo_nombre">
+          <label class="formulario_label" for="nombre">Nombre</label>
+          <input class="formulario_input form-control " type="text" name="nombre" id="nombre" placeholder="Ingrese su Nombre"> 
+          <div class="formulario_grupo-input invalid-feedback " id="errorNombre">
+          <p class="formulario_input-error">Por favor, ingrese su nombre.</p>            
+          </div>
+        </div>
+        <!--apellido-->
+        <div class="formulario_grupo" id="grupo_apellido">
+          <label class="formulario_label" for="lastname">Apellido</label>
+          <input class="formulario_input form-control" type="text" name="lastname" id="lastname" placeholder="Ingrese su Apellido">
+          <div class="formulario_grupo-input invalid-feedback " id="errorApellido">
+            <p class="formulario_input-error">Por favor, ingrese su apellido.</p>
+          </div>
+        </div>
+        <!--cooreo-->
+        <div class="formulario_grupo" id="grupo_email">
+          <label class="formulario_label" for="email">Correo</label>
+          <input class="formulario_input form-control" type="email" name="email" id="email" placeholder="correo@correo.com">
+          <div class="formulario_grupo-input invalid-feedback " id="errorCorreo">
+            <p class="formulario_input-error">Por favor, ingrese un email válido.</p>
+          </div>
+
+        </div>
+        <!--comentarios-->
+        <div class="formulario_grupo" id="grupo_comentario">
+          <label class="formulario_label" for="comments">Comentarios</label>
+          <input class="formulario_input form-control" type="text" name="comments" id="comments" placeholder="Escriba aquí..." spellcheck="true">
+          <div class="formulario_grupo-input invalid-feedback" id="errorComentarios">
+            <p class="formulario_input-error">Por favor, ingrese un comentario para enviar.</p>
+          </div>
+        </div>
+        <!--botón enviar-->
+        <div class="formulario_grupo formulario_grupo-btn-enviar" id="botones">
+          <input class="formulario_btn" type="reset" value="Borrar" id="btnBorrar">
+          <input class="formulario_btn" type="button" value="Enviar" id="btnEnviar">
+        </div>
+        <div id="botnEnviar">
+
+        </div>
+      </form>
     </section> <br>
   </main>
   <footer>
@@ -143,5 +241,7 @@
     -->
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="./assets/js/index.js"></script>
+
 </body>
 </html>

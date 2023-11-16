@@ -103,36 +103,55 @@ body h2 {
 
 /*header*/
 
-header{
-  background: linear-gradient(to right, rgb(29, 33, 245) 0%, rgb(35, 153, 199));
+/*header{
+
   height: 100%;
   display: flex;
-  justify-content: space-around !important;
+  justify-content:center !important;
   align-items: center;
-  padding: 1%,
-}
-
-#bar-nav{
+  padding: 0px; 
+}*/
+/*barra de navegación*/
+nav {
+  background: linear-gradient(to right, rgb(29, 33, 245) 0%, rgb(35, 153, 199));
+  display: -ms-flexbox;
   display: flex ;
-  gap: 10%;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
+  align-items: center;
+  -ms-flex-align: center;
+  padding: 15px 20px;
+  transition: .2s ease all;
   list-style-type: none;
-  text-align: center;
 }
 
-.img-st {
-  width: 10rem;
+.a-logo {
+  padding-left: 50px;
+}
+
+.logo {
   border-radius: 50%;
+  width: 10rem;
 }
 
 
-.etiquetas a {
+.etiquetas a{
   color: white;
   text-decoration: none;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-align: center;
   align-items:center;
+  font-size: 23px;
 }
 
+nav .etiquetas a {
+  margin-right: 40px;
+}
+
+.etiquetas a:hover {
+  color: rgb(102, 0, 0);
+}
 /*
 .container{
   width: 100%;
@@ -276,14 +295,19 @@ div .materias {
   text-shadow: 10px 13px 37px #030435;
 }
 
-/*formulario*/
+/**********************************formulario************************************/
 
-.form-register {
+.formulario {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.formulario {
   width: 550px;
   padding: 30px;
   margin: auto;
   margin-top: 10px;
-  border-radius: 4px;
+  border-radius: 50px;
   font-family: 'Arial';
   color: black;
   box-shadow: 7px 13px 37px #030435;
@@ -297,19 +321,74 @@ div .materias {
   text-shadow: 10px 10px 30px rgb(59, 108, 241);
 }
 
-.controls {
-  width: 100%;
-  background: white;
+.formulario_grupo {
   padding: 10px;
-  border-radius: 4px;
-  margin-bottom: 16px;
-  border: 1px solid #1f53c5;
-  font-family: 'Times New Roman';
-  font-size: 18px;
-  color: lightslategrey;
 }
 
-.form-register .botons {
+
+.formulario_label {
+  display: block;
+  padding: 10px 10px;
+  font-size: 20px;
+}
+
+.formulario_grupo-input {
+  position: relative;
+}
+
+.formulario_input {
+  width: 90%;
+  background: transparent;
+  padding: 0 10px;
+  border-radius: 5px;
+  border-bottom: 2px solid #1f53c5;
+  border-right: none;
+  border-top: none;
+  border-left: none;
+  font-family: 'Times New Roman';
+  font-size: 17px;
+  color: lightslategrey;
+  outline: none;
+  transition: all 1s;
+  line-height: 30px;
+}
+
+.formulario_input:focus {
+  box-shadow: 0 0 5px #1f53c5;
+}
+
+.formulario_validacion-estado {
+  position: absolute;
+  right: 60px;
+  bottom: 15px;
+  font-size: 16px;
+  opacity: 0;
+  z-index: 1000;
+}
+
+.formulario_input-error {
+  /*display: none;*/
+  font-size: 13px !important;
+  margin-bottom: 0;
+}
+
+
+/*.formulario_grupo-btn-enviar {
+  grid-column: span 1;
+}*/
+
+#botones {
+  display: flex;
+  
+}
+
+#botones input {
+  padding: 2%;
+  justify-content: center;
+  margin-right: 2%;
+}
+
+.formulario_btn {
   width: 100%;
   background: linear-gradient(to right, rgb(12, 104, 209), rgb(20, 133, 247));
   border: none;
@@ -318,9 +397,49 @@ div .materias {
   color: white;
   margin: 16px 0;
   font-size: 16px;
+  cursor: pointer;
 }
 
-/*footer*/
+.formulario_btn:hover {
+  border: 2px solid rgb(69, 149, 240);
+  color: #111111;
+  background: lightblue;
+  font-weight: bold;
+  height: 55px;
+}
+
+.formulario_mensaje-exito {
+  display: none;
+  font-size: 15px !important;
+  color: rgb(17, 214, 149);
+  padding: 5px 0;
+  text-align: center;
+}
+
+/*etiqueta para js*/
+.formulario_input-error-activo, .formulario_mensaje-exito-activo {
+  display: block;
+}
+
+/**********************************validaciones del formulario*****************************************/
+.formulario_grupo-correcto .formulario_validacion-estado {
+  color: rgb(9, 155, 9);
+  opacity: 1;
+}
+
+.formulario_grupo-incorrecto .formulario_label {
+  color: rgb(199, 5, 5);
+}
+
+.formulario_grupo-incorrecto .formulario_validacion-estado {
+  color: rgb(199, 5, 5);
+  opacity: 1;
+}
+
+.formulario_grupo-incorrecto .formulario_input {
+  border: 1px solid rgb(199, 5, 5);
+}
+/****************************************footer*****************************/
 
 footer {
   background-image: radial-gradient( circle 767px at 10.2% 22.1%,  rgb(29, 33, 245) 0%, rgba(0,191,255,1) 90% );
@@ -359,8 +478,86 @@ footer a {
 }
 */
 
-/* media queries*/
+/**********************************************************dark mode************************************************************/
+#switch-dm {
+  background: #1d1d42;
+  border-radius: 1000xp;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+  align-items: center;
+  border-radius: 25px;
+  height: 30px;
+}
 
+#switch-dm::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  /*si le quito el position absolute el botón se va al final*/
+  position: absolute;
+  background: #f1f1f1;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  transition: .3 ease all;
+  box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.2);
+}
+#switch-dm .active {
+  background: orange;
+  color: #000;
+}
+#switch-dm .active::after {
+  right: 0;
+  left: unset;
+    }
+  
+#switch-dm span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background: none;
+  color: #fff;
+  }
+
+
+.dark {
+  background: #181717;
+  }
+
+.dark nav {
+  background: linear-gradient(to right, rgb(1, 12, 26), rgb(2, 21, 41));
+}
+
+.dark .switch-dm a:hover {
+  color: aqua;
+}
+
+.dark h1 {
+  text-shadow: 15px 5px 15px rgb(214, 234, 248);
+}
+
+.dark .carta {
+  color: white;
+}
+
+.dark #sugerencias h3 {
+  color: #799ce7;
+}
+
+.dark #formulario {
+  color: white;
+  box-shadow: 7px 13px 37px #c9cadf;
+}
+
+/************************************************* media queries*****************************************/
+/****************************1200px**********************/
 @media (max-width: 1200px) {
 h1 {
   text-shadow: 10px 10px 25px #030435;
@@ -387,7 +584,6 @@ h1 {
 
 }
 
-
 #bar-nav{
   display: flex ;
   gap: 3%;
@@ -397,6 +593,33 @@ h1 {
 }
 }
 
+/************************980px**********************/
+@media (max-width: 980px) {
+  #barra-nav {
+    font-size: 10px !important;
+  }
+
+  .a-logo {
+    padding-left: 30px;
+  }
+
+  .logo {
+    width: 5rem;
+  }
+
+  .etiquetas a {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 850px) {
+  .etiquetas a {
+    font-size: 10px;
+  }
+}
+
+
+/************************790px*********************/
 @media (max-width: 790px) {
   h1 {
     text-shadow: 10px 10px 25px rgb(230, 126, 34 );
@@ -405,13 +628,17 @@ h1 {
     padding-right: 0;
   }
 
-  header {
+  #barra-nav {
     background: linear-gradient(to right, rgb(211, 84, 0) 0%, rgb(230, 126, 34));
     height: 80%;
     display: flex;
     flex-wrap: wrap;
     text-align: center;
     max-width: 100%;
+  }
+
+  .dark #barra-nav {
+    background: linear-gradient(to right, rgb(155, 63, 3) 0%, rgb(196, 99, 14));
   }
 
   #bar-nav{
@@ -426,6 +653,11 @@ h1 {
   background: linear-gradient(to right, rgb(230, 126, 34 ), rgb(235, 152, 78));
 }
 
+.dark .btn-ch {
+  background: linear-gradient(to right, rgb(139, 76, 20), rgb(173, 84, 6));
+}
+
+
   body h2 {
     text-align: center;
     background: rgb(12, 104, 209);
@@ -437,31 +669,124 @@ h1 {
   flex-direction: column;
  }
  /*formulario*/
+/*form-mod {
+
+}*/
  .form-register {
-  width: 450px;
+  width: 350px;
+  align-items: center;
+  padding-left: 5%;
 }
 
 .form-register h3 {
   color: rgb(209, 124, 12);
   text-shadow: 10px 10px 30px rgb(230, 126, 34 );
+  text-align: center !important;
+  padding-left: 55%;
 }
 
-.controls {
-  border: 1px solid rgb(230, 126, 34);
+.formulario_input {
+  border-bottom: 2px solid rgb(230, 126, 34);
 }
 
-.form-register .botons {
-  background: linear-gradient(to right, rgb(255, 160, 0 ), rgb(255, 193, 7 ));
+.formulario_btn {
+  background: linear-gradient(to right, rgb(223, 143, 6), rgb(255, 193, 7 ));
 }
+
+.dark .formulario_btn{
+  background: linear-gradient(to right, rgb(233, 124, 29), rgb(153, 73, 3));
+}
+
+.formulario_btn:hover {
+  border: 2px solid rgb(241, 158, 14);
+  color: #f1f1f1;
+  background: rgb(250, 172, 103);
+  font-weight: bold;
+  height: 55px;
+}
+
   /*footer*/
  footer {
   background-image: radial-gradient( circle 767px at 10.2% 22.1%,  rgb(211, 84, 0) 0%, rgba(243, 156, 18, 1) 90% );
+ }
+
+ .dark footer {
+  background-image: radial-gradient( circle 767px at 10.2% 22.1%,  rgb(145, 60, 3) 0%, rgb(243, 108, 18));
  }
  
 }
 
 
+/*****************680px*******************/
+@media (max-width:600px) {
+  h1 {
+    font-size: 40px !important;
+  }
+
+  h2 {
+    font-size: 35px !important;
+  }
+
+  #sugerencias {
+    padding-left: 28%;
+    font-size: 15px;
+  }
+
+  #sugerencias h3 {
+    padding-left: 24%;
+
+  }
+
+  .formulario {
+    width: 250px;
+
+  }
+}
+/***************************510px************************/
+@media(max-width: 510px) {
+  header {
+    align-content: center;
+  }
+
+  .etiquetas {
+    align-items: center;
+    text-align: center;
+  }
+
+  #barra-nav {
+    padding-left: 45%;
+    padding-right: 50%;
+    display: grid;
+    grid-template-columns: 1fr;
+
+  }
+
+  .a-logo {
+    padding-left: 0;
+    align-items: center;
+  }
+
+  .switch-dm {
+    height: 20px;
+    width: 50px;
+  }
+
+  nav .etiquetas a {
+    margin-right: 0;
+    padding-top: 5% !important;
+    padding-bottom: 5% !important;
+  }
+
+}
+
+
+
+/********************************media 480px**********************/
 @media (max-width: 480px) {
+  h1 {
+    font-size: 35px !important;
+  }
+
   #pub-in {
     src: url(<url>https://instagram.com/compartiendomisapuntes?utm_source=qr&igshid=MTdldnV4M29qdTF3Nw==);
   }
@@ -473,6 +798,10 @@ h1 {
     display: none !important;
   }
 }
+
+
+
+
 /*
 .buttons {
   min-width: 300px;
