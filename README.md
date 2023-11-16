@@ -1,6 +1,4 @@
-<span><img src="./assets/img/logo.jpg" style= "height: 10rem;  border-radius: 50%"></span>
-
-![Logo de la página](assets/img/logo.jpg)
+<span><img src="./assets/img/logo.jpg" style= "height: 10rem; align-items: center"></span>
 
 <h1 align="center"> COMPARTIENDO MIS APUNTES</h1>
 
